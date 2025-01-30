@@ -1,0 +1,10 @@
+.text-red{
+    color: red;
+}
+p {
+    font-weight: bold;
+}
+div{
+    padding: 20px 10px 10px 10px ;
+    background-color: rgb(248, 75, 75);
+}
