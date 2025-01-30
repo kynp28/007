@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  find_server:
+    image: stilliard/pure-ftpd:hardened
+    container_name: pure-ftpd
+    ports:
+      - "21:21"
+      - "30000-30000:30000-30000"
+    volumes:
+      - "/data:/home/username/"
+      - "./passwd:/etc/pure-ftpd/passwd"
+    environment:
+      PUBLICHOST: "localhost"
+      FTP_USER_NAME: username
+      FTP_USER_PASS: mypass
+      FTP_USER_HOME: /home/username
